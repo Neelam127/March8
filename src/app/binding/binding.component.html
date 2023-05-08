@@ -1,0 +1,34 @@
+<!--<p>binding works!</p>
+<h1>{{Interpol}}</h1>
+
+<input [value]="propertyBinding" type="text">
+
+<button (click)="Submit()">Click Me</button>
+
+<div [class]="applyColor">Class Binding apply color</div>
+<div [class.applyColourRed]="isTrue">Applying color if true</div>
+<div [ngClass]="applyMultipleStyle">ngClass</div>
+
+<div [style.color]="isTrue?'red':'orange'">applyColorRed</div>
+<div [ngStyle]="applyingMultipleStyle">apply style using ngStyle</div>-->
+
+<div *ngFor="let color of colors">
+    <p>{{color}}</p>
+</div>
+
+<input type="text" [(ngModel)]="userInput">
+<h1>{{userInput}}</h1>
+
+<div *ngIf="isTrue; else elseBlock">
+    <p>If Block is executed</p>
+</div>
+
+<ng-template #elseBlock>
+    <p>Else block is executed</p>
+</ng-template>
+
+<div [ngSwitch]="chooseColor">
+    <div *ngSwitchCase="'red'">red is selected</div>
+    <div *ngSwitchCase="'blue'">blue is selected</div>
+    
+</div>
